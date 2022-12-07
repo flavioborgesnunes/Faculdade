@@ -1,0 +1,47 @@
+body{
+    background-color: orange;
+    overflow-y: auto;
+    padding: 0px;
+    margin: 0px;
+}
+.menu{
+    font-size: 1.5em;
+    background-color: rgb(54, 49, 49);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: .8em;
+    height: 3em;
+}
+.menu a{
+    padding-right: 1em;
+    text-decoration: none;
+    color: gray;
+}
+.selecionado{
+    color: white !important;
+    font-weight: bolder;
+}
+.logo{
+    width:50px;
+    position: relative;
+    top: -3em;
+}
+.container img, h1{
+    display: inline-block;
+    margin-top: 6em;
+}
+footer{
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0px;
+    
+}

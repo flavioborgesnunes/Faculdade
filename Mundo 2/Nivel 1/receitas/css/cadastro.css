@@ -1,0 +1,14 @@
+form{
+    margin-top: 5em;
+}
+
+.form-group{
+    margin: .5em;
+}
+.btn1{
+    margin-top: 2em;
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: .7em;
+}
