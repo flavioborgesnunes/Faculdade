@@ -1,0 +1,35 @@
+<!doctype html>
+   <html lang="pt-BR">
+   <head>
+    <meta charset="utf-8">
+    <title>Praticando Javascript - Exercício 1</title>
+   </head>
+   <body>
+   
+   </body>
+   
+    <script type="text/javascript">
+   
+    var numero1 = prompt("Insira o primeiro número: ");
+    var numero2 = prompt("Insira o segundo número: ");
+    var operacao = prompt("Insira o operador: ");
+   
+    var resultadoDivisao = divida(numero1, numero2, operacao);
+   
+    alert('O resultado da divisão é igual a: ' + resultadoDivisao);
+   
+    function divida(numero1, numero2, op){
+   
+    var resultado = 0;
+   
+    resultado = eval(numero1 + op + numero2);
+   
+    return resultado;
+   
+    }
+    </script>
+   </html>
+   
+   
+   
+   
