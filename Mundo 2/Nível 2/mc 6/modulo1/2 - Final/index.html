@@ -24,6 +24,9 @@
                     <label for="matricula">Matrícula:</label>
                     <input v-model="matricula" type="text" id="matrícula" placeholder="Digite sua matrícula" />
 
+                    <label for="serie">Série:</label>
+                    <input v-model="serie" type="text" id="serie" placeholder="Digite sua série" />
+
                 </div>
 
                 <div id="previa">
@@ -34,7 +37,11 @@
                             <span class="dado-cartao">{{ nome }}</span>
 
                             <span class="label-cartao">Matrícula:</span>
-                            <span class="dado-cartao" v-text="matricula">{{ matricula }}</span>
+                            <span class="dado-cartao" v-text="matricula"></span>
+
+                            <span class="label-cartao">Série:</span>
+                            <span class="dado-cartao">{{ serie }}</span>
+
                         </div>
                         <div id="foto">Foto</div>
                     </div>
@@ -57,6 +64,7 @@
                     //nome e matricula inicialmente são Strings (textos) em branco ""
                     nome: "",
                     matricula: "",
+                    serie: "",
                 }
             },
             //Dizemos onde em nosso HTML o Vue irá viver, neste caso no bloco HTML com id central
