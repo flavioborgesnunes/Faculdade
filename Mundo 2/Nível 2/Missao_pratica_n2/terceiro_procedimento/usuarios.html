@@ -9,9 +9,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>Usuários</title>
 </head>
+<style>
+    h2{
+        color: white;
+        font-style: italic;
+    }
+</style>
 <body class="container bg-warning">
 
     <h1>Usuários de Teste via REST</h1>
+    <h2>Os usuarios deste exemplo são fornecidos pela API de testes reqres.in</h2>
     <div id ="usuarios" class="container-fluid">
         <div class="row">
             <div class="card col-3 p-2 m-3" v-for="(user,index) in users.data" :key="user.index">
