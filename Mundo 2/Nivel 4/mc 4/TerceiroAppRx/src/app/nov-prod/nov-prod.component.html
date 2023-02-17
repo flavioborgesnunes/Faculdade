@@ -9,7 +9,7 @@
             <input type="text" name="nome" [(ngModel)]="produto.nome"><br />
             <label for="quantidade">Quantidade:</label>
             <input type="number" name="quantidade" [(ngModel)]="produto.quantidade"><br />
-            <button type="submit">Incluir</button>
+            <button type="submit" [disabled]="enviando">Incluir</button>
         </form>
     </div>
 </main>
