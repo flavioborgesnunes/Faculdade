@@ -35,15 +35,14 @@ export class ControleLivrosService {
     return this.livros
   }
   adicionar(livro:Livro){
-      this.livros.push(livro);
+    livro.codigo =(this.livros.length -1) + 2;
+    this.livros.push(livro);
   }
   excluir(num:Number){
       this.livros.findIndex((temp:Livro, indice, livros)=>{
-        if(num == temp.codigo){
-          livros.splice(indice,1);
-        }
+        num == temp.codigo;
+        livros.splice(indice,1);
         return livros
-        
       });
   }
 }
