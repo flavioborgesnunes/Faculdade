@@ -38,12 +38,10 @@ export class ControleLivrosService {
     try{
       var codigo:number =(this.livros.length -1);
       livro.codigo = this.livros[codigo].codigo + 1;
-      console.log(livro.codigo)
       this.livros.push(livro);
   }
     catch{
       livro.codigo = 1;
-      console.log(livro.codigo);
       this.livros.push(livro);
     }
   }
