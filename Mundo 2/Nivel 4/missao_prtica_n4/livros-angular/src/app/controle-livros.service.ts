@@ -35,8 +35,17 @@ export class ControleLivrosService {
     return this.livros
   }
   adicionar(livro:Livro){
-    livro.codigo =(this.livros.length -1) + 2;
-    this.livros.push(livro);
+    try{
+      var codigo:number =(this.livros.length -1);
+      livro.codigo = this.livros[codigo].codigo + 1;
+      console.log(livro.codigo)
+      this.livros.push(livro);
+  }
+    catch{
+      livro.codigo = 1;
+      console.log(livro.codigo);
+      this.livros.push(livro);
+    }
   }
   excluir(num:number){
       var livroEncontrado = this.livros.findIndex((livro:Livro)=>{
