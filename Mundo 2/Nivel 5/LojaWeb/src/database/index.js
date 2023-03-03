@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 */
 mongoose
   .connect(
-    "mongodb://desenv:Fortaleza@localhost:27017/?authMechanism=DEFAULT"
+    "mongodb://desenv:Fortaleza@127.0.0.1:27017/?authMechanism=DEFAULT&directConnection=true"
   )
   .then(() => {
     console.log("Conectado ao MongoDB!");
