@@ -4,41 +4,47 @@ var livros: Array<Livro> = [
     {
         codigo:1,
         codEditora: 1,
-        titulo: 'livro1',
-        resumo: 'Será que funciona?',
-        autores: ['autor1','autor2']
-    },
-    {
+        titulo: 'Os Miseráveis',
+        resumo: 'A história sobre Jean Valjean, que da pobresa foi repentinamente inserido na alta sociedade',
+        autores:['Vitor Hugo', 'Maria']
+      },
+      {
         codigo:2,
         codEditora: 2,
-        titulo: 'livro2',
-        resumo: 'Qualquer',
-        autores: ['autor3','autor4']
-    },
-    {
+        titulo: 'Crime e Castigo',
+        resumo: 'Até que ponto o crime compensa? Essa história conta sobre Raskólnikov, que queria justificar seus crimes levando em consideração os grandes "criminosos" mundiais tidos como herois.',
+        autores:['Fiódor Dostoiévsk','Joana']
+      },
+      {
         codigo:3,
         codEditora: 3,
-        titulo: 'livro3',
-        resumo: 'Qualquer',
-        autores: ['autor5','autor6']
-    },
+        titulo: 'Guerra e Paz',
+        resumo: 'O romance de Tolstói versa sobre o caráter fatídico dos conflitos sangrentos nas relações humanas. Explora as origens das guerras napoleônicas no Oriente (em 1805 e 1812) e seus resultados',
+        autores: ['Tolstói', 'Juremar']
+      },
 ]
 
 export default class ControleLivro {
+    livros = livros
 
-    obterLivro(){
+    obterLivros(){
         return livros
     }
     incluir(livro:Livro){
-        livro =  livros[(-1)+1];
+        try{
+            var codigo:number =(this.livros.length -1);
+            livro.codigo = this.livros[codigo].codigo + 1;
+            this.livros.push(livro);
+        }
+          catch{
+            livro.codigo = 1;
+            this.livros.push(livro);
+          }
     }
     excluir(num:Number){
-        function valorIgual(){
-            if(num === livros.length){
-                livros.splice(0)
-            }
-            
-        }
-        livros.findIndex(valorIgual)
+        var livroEncontrado = this.livros.findIndex((livro:Livro)=>{
+            return num === livro.codigo
+          });
+          this.livros.splice(livroEncontrado, 1)
     }
 }
